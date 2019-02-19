@@ -18,7 +18,13 @@
         config.userEventInfo = {
             "PageView": function(context) {
                 return {
-                    userPageName: "PAGENAME2",
+                    userPageName:
+                    "<IMG LOWSRC="javascript:alert('XSS')">\
+                     <IMG DYNSRC="javascript:alert('XSS')">\
+                     <BODY BACKGROUND="javascript:alert('XSS')">\
+                     <INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');">\
+                     <IMG SRC="javascript:alert('XSS')"\
+                    ",
                     userData: {
                         x: "<img src=x onerror=alert('NCC')\">\"</img>",
                     },
