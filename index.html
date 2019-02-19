@@ -18,9 +18,9 @@
         config.userEventInfo = {
             "PageView": function(context) {
                 return {
-                    userPageName: "<IMG DYNSRC=`\"javascript:alert('XSS')\"` LOWSRC=`\"javascript:alert('XSS')\"`>",
+                    userPageName: "<a href="&#x3000;javascript:alert('NCC')">CLICKME</a>",
                     userData: {
-                        x: "<img src=x onerror=alert('NCC')\">\"</img>",
+                        x: "",
                     },
                     userDataLong: {
                         x: 13371
