@@ -8,5 +8,5 @@
   <foreignObject width="100" height="50"
     requiredExtensions="http://www.w3.org/1999/xhtml">
   <embed xmlns="http://www.w3.org/1999/xhtml" 
-    src="javascript:alert('NCC3-2')" />
+    src="javascript:alert(location)" />
 </svg>
