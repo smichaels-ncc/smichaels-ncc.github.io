@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg/onload="alert('NCC3')" xmlns:svg="http://www.w3.org/2000/svg"
+<svg xmlns:svg="http://www.w3.org/2000/svg"
 			xmlns="http://www.w3.org/2000/svg" width="100"
 			height="100"
 			id="xss">
 	<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="javascript:alert('NCC2')">
 	 <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
 	</a>
+  <script>alert('NCC3')</script>
 </svg>
