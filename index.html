@@ -14,21 +14,41 @@
         config.userEventInfo: {
             "PageView": function(context) {
                 return {
-                    userPageName: "<img src=x onerror=alert('NCC')></img>",
+                    userPageName: "<img src=x onerror=alert('NCC')>\"</img>",
                     userData: {
-                        x: "<img src=x onerror=alert('NCC')></img>",
+                        x: "<img src=x onerror=alert('NCC')\"></img>",
                     },
                     userDataLong: {
-                        x: "<img src=x onerror=alert('NCC')></img>"
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
                     },
                     userDataDouble: {
-                        x: "<img src=x onerror=alert('NCC')></img>"
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
                     },
                     userDataBoolean: {
-                        x: "<img src=x onerror=alert('NCC')></img>"
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
                     },
                     userDataDate: {
-                        x: "<img src=x onerror=alert('NCC')></img>"
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
+                    }
+                }
+            },
+            "Ajax": function(context) {
+                return {
+                    userPageName: "<img src=x onerror=alert('NCC')>\"</img>",
+                    userData: {
+                        x: "<img src=x onerror=alert('NCC')\"></img>",
+                    },
+                    userDataLong: {
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
+                    },
+                    userDataDouble: {
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
+                    },
+                    userDataBoolean: {
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
+                    },
+                    userDataDate: {
+                        x: "<img src=x onerror=alert('NCC')\"></img>"
                     }
                 }
             },
@@ -45,5 +65,23 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+
+    <button type="button">Ajax Request</button>
+    <p></p>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button").click(function(){
+          $.ajax({
+              type: 'POST',
+              url: 'script.php',
+              success: function(data) {
+                  alert(data);
+                  $("p").text(data);
+
+              }
+          });
+       });
+    });
+    </script>
   </body>
 </html>
