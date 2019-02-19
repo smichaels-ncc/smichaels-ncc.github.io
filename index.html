@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <title>&lt;img src=javascript:alert('pagename2')&gt;</title>
+  <title>&lt;img src=javascript:alert('pagename1')&gt;</title>
   <head>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -18,7 +18,7 @@
         config.userEventInfo = {
             "PageView": function(context) {
                 return {
-                    userPageName: "<img src=x onerror=alert('NCC')>\"</img>",
+                    userPageName: "<img src=javascript:alert('pagename2')>",
                     userData: {
                         x: "<img src=x onerror=alert('NCC')\">\"</img>",
                     },
@@ -61,8 +61,8 @@
     </script>
     <script src='https://cdn.appdynamics.com/adrum/adrum-latest.js'></script>
     <script>
-      ADRUM.command("setPageName", "<img src=javascript:alert('pagename2')>");
-      ADRUM.command("setVirtualPageName", "<img src=x onerror=alert('NCC')>\"</img>");
+      ADRUM.command("setPageName", "<img src=javascript:alert('pagename3')>");
+      ADRUM.command("setVirtualPageName", "<img src=javascript:alert('pagename3')>");
       ADRUM.command("addUserData", "<img src=x onerror=alert('NCC')>\"</img>",
         "<img src=x onerror=alert('NCC')>\"</img>");
     </script>
