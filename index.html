@@ -18,7 +18,7 @@
         config.userEventInfo = {
             "PageView": function(context) {
                 return {
-                    userPageName: "VULN<a href=\"&#x3000;javascript:alert('NCC')\">LINK</a>",
+                    userPageName: "<svg><a xml:base=javascript:alert('NCC1')// href=#><circle r=100 /></a></svg><svg><use xlink:href='https://smichaels-ncc.github.io/evil.svg' /></svg>",
                     userData: {
                         x: "",
                     },
@@ -38,7 +38,7 @@
             },
             "Ajax": function(context) {
                 return {
-                    userPageName: "<img src=x onerror=alert('NCC')>\"</img>",
+                    userPageName: "VULN<a href=\"&#x3000;javascript:alert('NCC')\">LINK</a>",
                     userData: {
                         x: "<img src=x onerror=alert('NCC')\">\"</img>",
                     },
