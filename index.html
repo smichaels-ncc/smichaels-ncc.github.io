@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <title>pageTitle</title>
   <head>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -18,11 +19,29 @@
     </script>
     <script src='https://cdn.appdynamics.com/adrum/adrum-latest.js'></script>
     <script>
+      ADRUM.command("setPageName", "pageName");
+      ADRUM.command("setVirtualPageName", "virtualPageName");
+      ADRUM.command("addUserData", "key", "value");
       ADRUM.command("setPageName", "TestPage");
     </script>
+    <script src="<img src=x onerror=alert('NCC')>\"</img>"></script>
   </head>
   <body>
     <h1>Test</h1>
-    </script>
+    <button type="button">Ajax Request</button>
+    <p></p>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button").click(function(){
+          $.ajax({
+            type: 'POST',
+            url: 'script.php',
+            success: function(data) {
+              alert(data);
+              $("p").text(data);
+            }
+          });
+       });
+    });
   </body>
 </html>
